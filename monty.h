@@ -33,6 +33,6 @@ typedef struct instruction_s
 		char *opcode;
 		void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-char *cpstr(char *dest, char *src);
 int count_line(char **argv);
+char **get_text(int argc, char **arv);
 #endif

@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "monty.h"
 /**
  * _isdigit - function that checks if a char is a digit
  * @c: variable that is asigned the value 0 or 1

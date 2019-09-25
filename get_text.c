@@ -21,7 +21,7 @@ char **get_text(int argc, char **arv)
 		exit(EXIT_FAILURE);
 
 	}
-	if (*buffer == NULL || *content == NULL)
+	if (buffer == NULL || content == NULL)
 		return (NULL);
 	while (value < count_line(arv))
 	{
@@ -46,5 +46,4 @@ char **get_text(int argc, char **arv)
 	free(buffer);
 	fclose(fp);
 	return (content);
-
 }

@@ -1,9 +1,13 @@
 #include "monty.h"
-
+/**
+ * count_line - function that count the lines from a file
+ * @argv: argument value
+ * Return: int
+*/
 int count_line(char **argv)
 {
 	int count, status = 1, text;
-	size_t size = 32; 
+	size_t size = 32;
 	char **buffer = malloc(sizeof(char) * 1024);
 	FILE *fp;
 
@@ -15,21 +19,10 @@ int count_line(char **argv)
 	while (status)
 	{
 		text = getline(buffer, &size, fp);
-		if (text == EOF)
-			status = 0;
 		count++;
+		if (text == EOF)
+			return (count);
 	}
 	fclose(fp);
 	return (count);
-}
-
-int main (int argc, char **argv)
-{
-	(void) argc;
-	int count;
-
-	count = count_line(argv);
-	printf("conteo %d\n", count);
-
-	return (0);
 }

@@ -1,43 +1,21 @@
 #include "monty.h"
-int main(int argc, char **arv)
+/**
+ * main - function main of montybytecode interpretr
+ * @argc: amount of parameters of the main
+ * @argv: db pointer to each parameter of main
+ * Return: 0
+ */
+int main(int argc, char **argv)
 {
-	FILE *fp = fopen(arv[1], "r");
-	int text;
-	char **buffer = malloc(sizeof(char) * 10000);
-	int fd, a = 0, idx = 0;
-	int status = 1, value = 0;
-	size_t size = 32;
-	char **content = malloc(sizeof(char) * 10000);
+	char **test = get_text(argc, argv);
+	int n = 0;
 
-	while (value <= 15)
+	while (test[n] != NULL)
 	{
-		content[value] = malloc(sizeof(char) * 100);
-		value++;
+		printf("%s", test[n]);
+		n++;
 	}
-	if (argc != 2)
-	{
-		printf("USAGE: monty file\n");
-		exit(EXIT_FAILURE);
-	}
-	if (fp == NULL)
-	{
-		printf("Error: Can't open file %s\n", arv[1]);
-		exit(EXIT_FAILURE);
-	}
-	while (status)
-	{
-		text = getline(buffer, &size, fp);
-		if (text == EOF)
-			break;
-		cpstr(content[idx], *buffer);
-		idx++;
-	}
-	while (content[a] != NULL)
-	{
-		printf("%s\n", content[a]);
-		a++;
-	}
-	fclose(fp);
+
 	return (0);
 
 }

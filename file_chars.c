@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  * file_chars - function that gets the amount of chars of a file
- * @argv: db pointer to strings of main parameters
+ * @arv: db pointer to strings of main parameters
  * Return: amount of chars of a file
  */
 int file_chars(char **arv)

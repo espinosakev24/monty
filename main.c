@@ -8,13 +8,8 @@
 int main(int argc, char **argv)
 {
 	char **test = get_text(argc, argv);
-	int n = 0;
 
-	while (test[n] != NULL)
-	{
-		printf("%s", test[n]);
-		n++;
-	}
+	print_dlistint(check_command(test));
 
 	return (0);
 

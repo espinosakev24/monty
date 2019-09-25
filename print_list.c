@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "lists.h"
+#include "monty.h"
 /**
  * print_dlistint - function that prints nodes data in a dlinkedlist
  * @h: header pointer to the dlinked list

@@ -4,7 +4,7 @@
  * @content:  double pointer
  * Return: the head of the structure
 */
-stack_t *check_command(char **content)
+stack_t **check_command(char **content)
 {
 	int line = 0, i = 0, idx = 0;
 	char *val;
@@ -16,15 +16,15 @@ stack_t *check_command(char **content)
 		if (val == "push")
 		{
 			val = strtok(NULL, " ");
-			while (val[i] != NULL)
+			while (val[i] != '\0')
 			{
-				if (_isdigit(val) == 0)
+				if (_isdigit(val[i]) == 0)
 				{
 					printf("line %d: invalid input\n", line);
 					exit(1);
 				}
 				i++;
-				add_dnodeint(&head, atoi(val));
+				add_dnodeint(head, atoi(val));
 			}
 		}
 		line++;

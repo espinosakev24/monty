@@ -13,7 +13,7 @@ char **get_text(int argc, char **arv)
 	int fd, a = 0, idx = 0;
 	int status = 1, value = 0;
 	size_t size = 32;
-	char **content = malloc(sizeof(char) * 10000);
+	char **content = malloc(sizeof(char) * file_chars(arv));
 
 	if (argc != 2)
 	{
@@ -21,6 +21,8 @@ char **get_text(int argc, char **arv)
 		exit(EXIT_FAILURE);
 
 	}
+	if (*buffer == NULL || *content == NULL)
+		return (NULL);
 	while (value < count_line(arv))
 	{
 		content[value] = malloc(sizeof(char) * 100);
@@ -38,9 +40,10 @@ char **get_text(int argc, char **arv)
 		text = getline(buffer, &size, fp);
 		if (text == EOF)
 			break;
-		cpstr(content[idx], *buffer);
+		strcpy(content[idx], *buffer);
 		idx++;
 	}
+	free(buffer);
 	fclose(fp);
 	return (content);
 

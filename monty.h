@@ -43,5 +43,5 @@ char *no_breakline(char *buffer);
 size_t print_dlistint(stack_t *h);
 void free_pointer(char **pointer);
 void free_list(stack_t *head);
-int push_function(char *value, int line);
+int push_function(int line);
 #endif

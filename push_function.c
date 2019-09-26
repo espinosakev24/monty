@@ -5,22 +5,21 @@
  * @line: int that counts the lines of the file
  * Return: value that is an integer
  */
-int push_function(char *value, int line)
+int push_function(int line)
 {
+	char *value;
 	int i = 0;
 
-	if (value == NULL)
-		return (0);
 	value = strtok(NULL, " ");
 	no_breakline(value);
 	while (value[i] != '\0')
 	{
-		if (value[0] == '-')
+		if (value[i] == '-')
 		{
 			i++;
 			continue;
 		}
-		if (_isdigit(value[i] == 0))
+		if (_isdigit(value[i]) == 0)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line);
 			exit(EXIT_FAILURE);

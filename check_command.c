@@ -12,8 +12,14 @@ stack_t *check_command(char **content)
 
 	while (content[idx] != NULL && strcmp(content[idx], "") != 0)
 	{
-		val = strtok(content[idx], " ");
-		if (strcmp(val, "pall\n") == 0)
+		val = strtok(content[idx], " \n");
+		if (val == NULL)
+		{
+			idx++;
+			line++;
+			continue;
+		}
+		if (strcmp(val, "pall") == 0)
 		{
 			print_dlistint(head);
 			free_list(head);
@@ -25,7 +31,7 @@ stack_t *check_command(char **content)
 		}
 		else if (strcmp(val, "push") == 0)
 		{
-			num = push_function(val, line);
+			num = push_function(line);
 			add_dnodeint(&head, num);
 		}
 		idx++;

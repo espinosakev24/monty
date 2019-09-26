@@ -1,7 +1,6 @@
 #include "monty.h"
 /**
  * push_function - function that get the int of push command
- * @value: string with a \n char that will be converted into a int
  * @line: int that counts the lines of the file
  * Return: value that is an integer
  */

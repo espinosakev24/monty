@@ -1,5 +1,5 @@
 #ifndef Monty
-idefine Monty
+#define Monty
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -41,6 +41,6 @@ stack_t *add_dnodeint(stack_t **head, int n);
 stack_t *check_command(char **content);
 char *no_breakline(char *buffer);
 size_t print_dlistint(stack_t *h);
-void free_dlistint(stack_t *head);
 void free_pointer(char **pointer);
+void free_list(stack_t *head);
 #endif

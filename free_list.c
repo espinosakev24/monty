@@ -4,9 +4,9 @@
 * @head: double pointer to ddlklist
 * Return: void
 */
-void free_dlistint(stack_t *head)
+void free_list(stack_t *head)
 {
-	dlistint_t *aux;
+	stack_t *aux;
 
 	while (head != NULL)
 	{

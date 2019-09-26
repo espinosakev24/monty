@@ -16,6 +16,7 @@ stack_t *check_command(char **content)
 		if (strcmp(val, "pall\n") == 0)
 		{
 			print_dlistint(head);
+			free_list(head);
 		}
 		else if (strcmp(val, "push") != 0)
 		{
@@ -28,6 +29,10 @@ stack_t *check_command(char **content)
 			no_breakline(val);
 			while (val[i] != '\0')
 			{
+				if (val[0] == '-')
+				{
+					continue;
+				}
 				if (_isdigit(val[i]) == 0)
 				{
 					fprintf(stderr, "L%d: usage: push integer\n", line);

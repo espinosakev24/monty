@@ -4,16 +4,16 @@
  * @content:  double pointer
  * Return: the head of the structure
 */
-stack_t **check_command(char **content)
+stack_t *check_command(char **content)
 {
 	int line = 0, i = 0, idx = 0, num = 0;
 	char *val;
-	stack_t **head;
+	stack_t *head = NULL;
 
-	while (content[idx] != NULL)
+	while (content[idx] != NULL && strcmp(content[idx], "") != 0)
 	{
 		val = strtok(content[idx], " ");
-		if (val == content[idx])
+		if (strcmp(val, "push") == 0)
 		{
 			val = strtok(NULL, " ");
 			no_breakline(val);

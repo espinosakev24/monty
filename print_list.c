@@ -4,15 +4,15 @@
  * @h: header pointer to the dlinked list
  * Return: amount of nodes
  */
-size_t print_dlistint(stack_t **h)
+size_t print_dlistint(stack_t *h)
 {
 	int nodes = 0;
 
-	while (*h)
+	while (h)
 	{
-		printf("%d\n", (*h)->n);
+		printf("%d\n", h->n);
 		nodes++;
-		*h = (*h)->next;
+		h = h->next;
 	}
 	return (nodes);
 }

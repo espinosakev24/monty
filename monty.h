@@ -37,8 +37,8 @@ int count_line(char **argv);
 char **get_text(int argc, char **arv);
 int _isdigit(int c);
 int file_chars(char **arv);
-stack_t *add_dnodeint(stack_t **head, int n);
-stack_t **check_command(char **content);
+stack_t *add_dnodeint(stack_t *head, int n);
+stack_t *check_command(char **content);
 char *no_breakline(char *buffer);
-size_t print_dlistint(stack_t **h);
+size_t print_dlistint(stack_t *h);
 #endif

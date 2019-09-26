@@ -8,9 +8,8 @@
 int main(int argc, char **argv)
 {
 	char **test = get_text(argc, argv);
+
 	check_command(test);
-	free_pointer(test);
 
 	return (0);
-
 }

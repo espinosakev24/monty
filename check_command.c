@@ -6,7 +6,7 @@
 */
 stack_t *check_command(char **content)
 {
-	int line = 1, i = 0, idx = 0, num = 0;
+	int line = 1, idx = 0, num = 0;
 	char *val;
 	stack_t *head = NULL;
 
@@ -25,22 +25,7 @@ stack_t *check_command(char **content)
 		}
 		else if (strcmp(val, "push") == 0)
 		{
-			val = strtok(NULL, " ");
-			no_breakline(val);
-			while (val[i] != '\0')
-			{
-				if (val[0] == '-')
-				{
-					continue;
-				}
-				if (_isdigit(val[i]) == 0)
-				{
-					fprintf(stderr, "L%d: usage: push integer\n", line);
-					exit(1);
-				}
-				i++;
-			}
-			num = atoi(val);
+			num = push_function(val, line);
 			add_dnodeint(&head, num);
 		}
 		idx++;

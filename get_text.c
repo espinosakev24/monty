@@ -10,7 +10,7 @@ char **get_text(int argc, char **arv)
 	FILE *fp;
 	int text;
 	char **buffer = malloc(sizeof(char) * 10000);
-	int fd, a = 0, idx = 0;
+	int idx = 0;
 	int status = 1, value = 0;
 	size_t size = 32;
 	char **content = malloc(sizeof(char) * file_chars(arv));

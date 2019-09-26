@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 {
 	char **test = get_text(argc, argv);
 
-	print_dlistint(check_command(test));
+	check_command(test);
 
 	return (0);
 

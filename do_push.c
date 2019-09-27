@@ -21,6 +21,8 @@ void do_push(stack_t **head, int line)
 		if (_isdigit(value[i]) == 0)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line);
+			/*free_err(*head);*/
+			free_dlist(head);
 			exit(EXIT_FAILURE);
 		}
 		i++;

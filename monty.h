@@ -33,10 +33,23 @@ typedef struct instruction_s
 		char *opcode;
 		void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+/**
+ * struct global_s - strcut
+ * @fp: asdfasd
+ * @buff: buffer
+ */
+typedef struct global_s
+{
+	FILE *fp;
+	char *buff;
+} global_t;
+extern global_t global;
 int _isdigit(int c);
 stack_t *add_dnodeint(stack_t **head, int n);
 size_t print_dlistint(stack_t **h);
 void do_push(stack_t **head, int line);
 int *make_op(stack_t **head, char *str, int line);
 void free_list(stack_t *head);
+void free_err(stack_t *stack);
+void free_dlist(stack_t **head);
 #endif

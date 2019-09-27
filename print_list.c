@@ -7,12 +7,13 @@
 size_t print_dlistint(stack_t **h)
 {
 	int nodes = 0;
+	stack_t *aux = *h;
 
-	while (*h)
+	while (aux)
 	{
-		printf("%d\n", (*h)->n);
+		printf("%d\n", aux->n);
 		nodes++;
-		*h = (*h)->next;
+		aux = aux->next;
 	}
 	return (nodes);
 }

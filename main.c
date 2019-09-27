@@ -31,6 +31,11 @@ int main(int argc, char **argv)
 		if (text == EOF)
 			break;
 		str = strtok(buff, " \n\t\r");
+		if (str == NULL)
+		{
+			line++;
+			continue;
+		}
 		make_op(&head, str, line);
 		line++;
 	}

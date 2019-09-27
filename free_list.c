@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
-* free_dlistint - function that frees a db linked list
+* free_list - function that frees a db linked list
 * @head: double pointer to ddlklist
 * Return: void
 */

@@ -9,10 +9,8 @@ void do_push(stack_t **head, int line)
 {
 	char *value;
 	int i = 0, num = 0;
-	
 
-	value = strtok(NULL, " ");
-	no_breakline(value);
+	value = strtok(NULL, " \n\t\r");
 	while (value[i] != '\0')
 	{
 		if (value[i] == '-')

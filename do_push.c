@@ -5,10 +5,11 @@
  * @line: int that counts the lines of the file
  * Return: value that is an integer
  */
-void do_push(stack_t *head, int line)
+void do_push(stack_t **head, int line)
 {
 	char *value;
-	int i = 0;
+	int i = 0, num = 0;
+	
 
 	value = strtok(NULL, " ");
 	no_breakline(value);
@@ -26,5 +27,6 @@ void do_push(stack_t *head, int line)
 		}
 		i++;
 	}
-	add_dnodeint(&head, atoi(value));
+	num = atoi(value);
+	add_dnodeint(head, num);
 }

@@ -10,8 +10,9 @@ int main(int argc, char **argv)
 	FILE *fp = NULL;
 	int text = 0, status = 1, line = 1;
 	char *str;
-	size_t size = 32;
-	char **buff = malloc(sizeof(char) * 1024);
+	size_t size = 0;
+	char *buff = NULL;
+	stack_t *head = NULL;
 
 	if (argc != 2)
 	{
@@ -26,13 +27,15 @@ int main(int argc, char **argv)
 	}
 	while (status)
 	{
-		text = getline(buff, &size, fp);
+		text = getline(&buff, &size, fp);
 		if (text == EOF)
 			break;
-		str = strtok(*buff, " \n\t\r");
-		make_op(str, line);
+		str = strtok(buff, " \n\t\r");
+		make_op(&head, str, line);
 		line++;
 	}
+	free(buff);
+	free_list(head);
 	fclose(fp);
 	return (0);
 }

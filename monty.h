@@ -36,9 +36,10 @@ typedef struct instruction_s
 int _isdigit(int c);
 stack_t *add_dnodeint(stack_t **head, int n);
 char *no_breakline(char *buffer);
-size_t print_dlistint(stack_t *h);
+size_t print_dlistint(stack_t **h);
 void free_pointer(char **pointer);
 void free_list(stack_t *head);
-void do_push(stack_t *head, int line);
-int *make_op(char *str, int line);
+void do_push(stack_t **head, int line);
+int *make_op(stack_t **head, char *str, int line);
+void free_list(stack_t *head);
 #endif

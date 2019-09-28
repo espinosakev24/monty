@@ -20,16 +20,9 @@ size_t print_dlistint(stack_t **h)
 /**
  * print_head - print the first element in a double linked list
  * @h: header pointer to the dlinked list
- * @line: line of the file
  * Return: void
  */
-void print_head(stack_t **h, int line)
+void print_head(stack_t **h)
 {
-	if (*h == NULL)
-	{
-		fprintf(stderr, "L%d:  can't pint, stack empty\n", line);
-		free_dlist(h);
-		exit(EXIT_FAILURE);
-	}
 	printf("%d\n", (*h)->n);
 }

@@ -8,7 +8,8 @@
 void do_push(stack_t **head, int line)
 {
 	char *value;
-	int i = 0, num = 0;
+	int i = 0; 
+	long int num = 0;
 
 	value = strtok(NULL, " \n\t\r");
 	if (value == NULL)

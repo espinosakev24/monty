@@ -34,5 +34,5 @@ void free_dlist(stack_t **head)
 	if (global.buff)
 		free(global.buff);
 	if (global.fp)
-		free(global.fp);
+		fclose(global.fp);
 }

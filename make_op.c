@@ -16,6 +16,10 @@ int *make_op(stack_t **head, char *str, int line)
 	{
 		print_dlistint(head);
 	}
+	else if (strcmp(str, "pint") == 0)
+	{
+		print_head(head);
+	}
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line, str);

@@ -17,3 +17,15 @@ size_t print_dlistint(stack_t **h)
 	}
 	return (nodes);
 }
+/**
+ * print_head - print the first element in a double linked list
+ * @h: header pointer to the dlinked list
+ * Return: void
+ */
+void print_head(stack_t **h)
+{
+	stack_t *aux = *h;
+
+	printf("%d\n", aux->n);
+}
+

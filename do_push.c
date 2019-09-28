@@ -11,6 +11,12 @@ void do_push(stack_t **head, int line)
 	int i = 0, num = 0;
 
 	value = strtok(NULL, " \n\t\r");
+	if (value == NULL)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line);
+		free_dlist(head);
+		exit(EXIT_FAILURE);
+	}
 	while (value[i] != '\0')
 	{
 		if (value[i] == '-')
@@ -21,7 +27,6 @@ void do_push(stack_t **head, int line)
 		if (_isdigit(value[i]) == 0)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line);
-			/*free_err(*head);*/
 			free_dlist(head);
 			exit(EXIT_FAILURE);
 		}

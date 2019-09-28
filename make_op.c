@@ -20,7 +20,6 @@ int *make_op(stack_t **head, char *str, int line)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line, str);
 		free_dlist(head);
-		/*free_err(*head);*/
 		exit(EXIT_FAILURE);
 	}
 	return (0);

@@ -22,11 +22,11 @@ size_t print_dlistint(stack_t **h)
  * @h: header pointer to the dlinked list
  * Return: void
  */
-void print_head(stack_t **h)
+void print_head(stack_t **h, int line)
 {
 	if (*h == NULL)
 	{
-		fprintf(stderr, "L1:  can't pint, stack empty\n");
+		fprintf(stderr, "L%d:  can't pint, stack empty\n", line);
 		free_dlist(h);
 		exit(EXIT_FAILURE);
 	}

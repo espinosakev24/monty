@@ -22,7 +22,7 @@ size_t print_dlistint(stack_t **h)
  * @h: header pointer to the dlinked list
  * Return: void
  */
-void print_head(stack_t **h) 
+void print_head(stack_t **h)
 {
 	stack_t *aux = *h;
 

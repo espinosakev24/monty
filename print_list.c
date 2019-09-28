@@ -24,8 +24,11 @@ size_t print_dlistint(stack_t **h)
  */
 void print_head(stack_t **h)
 {
-	stack_t *aux = *h;
-
-	printf("%d\n", aux->n);
+	if (*h == NULL)
+	{
+		fprintf(stderr, "L1:  can't pint, stack empty\n");
+		free_dlist(h);
+		exit(EXIT_FAILURE);
+	}
+	printf("%d\n", (*h)->n);
 }
-

@@ -52,4 +52,5 @@ int *make_op(stack_t **head, char *str, int line);
 void free_list(stack_t *head);
 void free_dlist(stack_t **head);
 void print_head(stack_t **h, int line);
+void do_pop(stack_t **h, int line);
 #endif

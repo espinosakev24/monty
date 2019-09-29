@@ -10,9 +10,10 @@ void swapping(stack_t **h, int line)
 	stack_t *aux = *h;
 	int num1 = 0;
 	int num2 = 0;
-	/*int list_len = 0;*/
-	/*list_len = dlistint_len(h);*/
-	if (!aux->next || !aux ||!*h || !h)
+	int list_len = 0;
+
+	list_len = dlistint_len(h);
+	if (list_len < 2)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line);
 		fclose(global.fp);

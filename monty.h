@@ -46,7 +46,6 @@ typedef struct global_s
 extern global_t global;
 int _isdigit(int c);
 stack_t *add_dnodeint(stack_t **head, int n);
-size_t print_dlistint(stack_t **h);
 void do_push(stack_t **head, int line);
 int *make_op(stack_t **head, char *str, int line);
 void free_list(stack_t *head);

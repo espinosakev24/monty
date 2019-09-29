@@ -15,9 +15,7 @@ void do_pop(stack_t **h, int line)
 		fclose(global.fp);
 		exit(EXIT_FAILURE);
 	}
-
 	aux = *h;
 	*h = (*h)->next;
-	(*h)->prev = NULL;
 	free(aux);
 }

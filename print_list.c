@@ -20,6 +20,7 @@ size_t print_dlistint(stack_t **h)
 /**
  * print_head - print the first element in a double linked list
  * @h: header pointer to the dlinked list
+ * @line: amount of lines of the file
  * Return: void
  */
 void print_head(stack_t **h, int line)

@@ -16,8 +16,6 @@ int *make_op(stack_t **head, char *str, int line)
 		print_head(head, line);
 	else if (strcmp(str, "pop") == 0)
 		do_pop(head, line);
-	else if (strcmp(str, "swap") == 0)
-		swapping(head, line);
 	else if (strcmp(str, "nop") == 0)
 		line++;
 	else

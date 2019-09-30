@@ -59,4 +59,5 @@ void simple_math(stack_t **h, int line, int signal, char *str);
 int math_operations(int n1, int n2, int signal, int line);
 void do_pchar(stack_t **h, int line);
 void printstr(stack_t **h);
+void rotl(stack_t **h);
 #endif

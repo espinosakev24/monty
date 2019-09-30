@@ -35,7 +35,7 @@ int *make_op(stack_t **head, char *str, int line)
 	else if (strcmp(str, "pchar") == 0)
 		do_pchar(head, line);
 	else if (strcmp(str, "pstr") == 0)
-		printstr(head, line);
+		printstr(head);
 	else
 	{	fprintf(stderr, "L%d: unknown instruction %s\n", line, str);
 		free_dlist(head);

@@ -89,17 +89,6 @@ int math_operations(int n1, int n2, int signal, int line)
 			exit(EXIT_FAILURE);
 		}
 		break;
-	case 5:
-		/* mod */
-		if (n1 == 0)
-		{
-			fprintf(stderr, "L%d: division by zero\n", line);
-			fclose(global.fp);
-			exit(EXIT_FAILURE);
-		}
-		result = n2 % n1;
-		break;
-
 	default:
 		break;
 	}

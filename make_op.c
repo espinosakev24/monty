@@ -26,8 +26,6 @@ int *make_op(stack_t **head, char *str, int line)
 		simple_math(head, line, 3, "mul");
 	else if (strcmp(str, "div") == 0)
 		simple_math(head, line, 4, "div");
-	else if (strcmp(str, "mod") == 0)
-		simple_math(head, line, 5, "mod");
 	else if (strcmp(str, "nop") == 0)
 		line++;
 	else

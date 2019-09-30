@@ -37,7 +37,13 @@ int *make_op(stack_t **head, char *str, int line)
 	else if (strcmp(str, "pstr") == 0)
 		printstr(head);
 	else if (strcmp(str, "rotl") == 0)
-		rotl(head);
+	{
+		if (rotl(head) == 1)
+			line++;	}
+	else if (strcmp(str, "rotr") == 0)
+	{
+		if (rotr(head) == 1)
+			line++;	}
 	else
 	{	fprintf(stderr, "L%d: unknown instruction %s\n", line, str);
 		free_dlist(head);

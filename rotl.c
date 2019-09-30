@@ -4,13 +4,15 @@
  * @h: header pointer to the dblinkedlist
  * Return: void
  */
-void rotl(stack_t **h)
+int rotl(stack_t **h)
 {
 	stack_t *aux = *h;
 	int int_buf = 0;
 
-	int_buf = aux->n;
+	if (!*h || !h)
+		return (1);
 
+	int_buf = aux->n;
 	while (aux)
 	{
 		if (aux->next == NULL)
@@ -21,4 +23,34 @@ void rotl(stack_t **h)
 		aux->n = aux->next->n;
 		aux = aux->next;
 	}
+	return (0);
+}
+int rotr(stack_t **h)
+{
+	stack_t *aux = *h;
+	int tail = 0;
+	
+	if (!*h || !h)
+		return (1);
+
+	while (aux)
+	{
+		if (aux->next == NULL)
+		{
+			tail = aux->n;
+			break;
+		}
+		aux = aux->next;
+	}
+	while (aux)
+	{
+		if (aux->prev == NULL)
+		{
+			aux->n = tail;
+			break;
+		}
+		aux->n = aux->prev->n;
+		aux = aux->prev;
+	}
+	return (0);
 }

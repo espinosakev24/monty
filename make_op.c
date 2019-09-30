@@ -19,7 +19,13 @@ int *make_op(stack_t **head, char *str, int line)
 	else if (strcmp(str, "swap") == 0)
 		swapping(head, line);
 	else if (strcmp(str, "add") == 0)
-		add(head, line);
+		simple_math(head, line, 1, "add");
+	else if (strcmp(str, "sub") == 0)
+		simple_math(head, line, 2, "sub");
+	else if (strcmp(str, "mul") == 0)
+		simple_math(head, line, 3, "mul");
+	else if (strcmp(str, "div") == 0)
+		simple_math(head, line, 4, "div");
 	else if (strcmp(str, "nop") == 0)
 		line++;
 	else

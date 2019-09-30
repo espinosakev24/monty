@@ -55,5 +55,6 @@ void swapping(stack_t **h, int line);
 int dlistint_len(stack_t **h);
 void do_pop(stack_t **h, int line);
 size_t print_dlistint(stack_t **h);
-void add(stack_t **h, int line);
+void simple_math(stack_t **h, int line, int signal, char *str);
+int math_operations(int n1, int n2, int signal, int line);
 #endif

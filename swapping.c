@@ -88,7 +88,9 @@ int math_operations(int n1, int n2, int signal, int line)
 			fclose(global.fp);
 			exit(EXIT_FAILURE);
 		}
+		result = n2 / n1;
 		break;
+
 	default:
 		break;
 	}

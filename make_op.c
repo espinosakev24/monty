@@ -32,6 +32,8 @@ int *make_op(stack_t **head, char *str, int line)
 		line++;
 	else if (str[0] == '#')
 		line++;
+	else if (strcmp(str, "pchar") == 0)
+		do_pchar(head, line);
 	else
 	{	fprintf(stderr, "L%d: unknown instruction %s\n", line, str);
 		free_dlist(head);
